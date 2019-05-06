@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class ArticlesController < ApplicationController
-  before_action :find_article, only: %i[show edit update destroy]
-  before_action :authorize_article, only: %i[edit update destroy]
+  before_action :find_article, only: %i[show edit update destroy update_photo]
+  before_action :authorize_article, only: %i[edit update destroy update_photo]
   def index
     @articles = ArticleDecorator.decorate_collection(Article.all.paginate(page: params[:page], per_page: 7))
     respond_to do |format|
@@ -50,6 +50,11 @@ class ArticlesController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def update_photo
+    @article.update_attributes(params.permit(:photo))
+    redirect_to article_path
   end
 
   def destroy

@@ -11,5 +11,6 @@
   .col-4
     - @article.images.each do |image|
       %img.img-thumbnail{:alt => "bezpieczna przystań", :src => image.image_url, :id => "article_image_#{image.id}"}
+        = link_to 'Ustaw jako główne zdjęcie', update_photo_article_path(@article, photo: image.image_url), method: :put, class: 'btn btn-secondary btn-lg'
 = social_share_button_tag(@article.title, :allow_sites => %w(twitter))
 = social_share_button_tag(@article.title, :allow_sites => %w(facebook), :url => article_url(@article), desc: @article.title)

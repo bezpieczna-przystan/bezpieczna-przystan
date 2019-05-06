@@ -27,3 +27,4 @@
   .col-4
     - @animal.images.each do |image|
       %img.img-thumbnail{alt: "bezpieczna przystań", src: image.image_url, id:"#animal_image_#{image.id}"}
+      = link_to 'Ustaw jako główne zdjęcie', update_photo_animal_path(@animal, photo: image.image_url), method: :put, class: 'btn btn-secondary btn-lg'

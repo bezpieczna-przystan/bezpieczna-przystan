@@ -27,4 +27,8 @@ class ApplicationPolicy
   def destroy?
     !!user
   end
+
+  def update_photo?
+    !!user
+  end
 end
