@@ -56,7 +56,7 @@
 }
 
 .container {
-  min-height: 600px;
+  min-height: 800px;
   display: inherit;
   margin-right: auto;
   margin-left: auto;
@@ -255,4 +255,8 @@ a:hover {
 
 .help-headers{
   margin: auto;
+}
+
+.cropped {
+  min-height: 600px;
 }

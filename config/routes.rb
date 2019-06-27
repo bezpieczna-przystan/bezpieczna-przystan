@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     post 'adopt', to: 'adoptions#create', as: 'send_adoption_form'
     put :update_photo, on: :member
   end
+  get 'adoption', to: 'adoptions#new_preferences'
+  post 'adoption', to: 'adoptions#send_preferences'
   resources :static_pages
 
   resources :articles do

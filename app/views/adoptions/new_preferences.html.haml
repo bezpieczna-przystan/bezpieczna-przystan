@@ -1,14 +1,14 @@
-%h1 Formularz adopcyjny
-%h2= @animal.name
-.col-2
-  %img.img-thumbnail{alt: @animal.name, src: @animal.main_image}
+%h1 Ankieta dla przyszłego właściciela
+%h3 Odpowiadając na kilka pytań pozwolisz nam znaleźć pasa spełniającego Twoje wymagania i wpisującego się w Twój rytm dnia.
 %p
-%p W celu ułatwienia procesu związanego z adopcją, prosimy o wypełnienie poniższego formularza.
+%p
 
-= simple_form_for @adoption, url: animal_send_adoption_form_path do |f|
+= simple_form_for @adoption, url: adoption_path do |f|
   = f.input :name, label: 'Imię i nazwisko:'
   = f.input :email
   = f.input :phone_number, label: 'Nr telefonu'
+  = f.input :gender, label: 'Płeć psa', collection: ['Pies', 'Suka']
+  = f.input :dog_size, label: 'Wielkość psa', collection: ['Do łydki', 'Do kolana', 'Powyżej kolana', 'Molos']
   = f.input :where_keep, label: 'Gdzie pies będzie głównie przebywał?', collection: ['Dom', 'Ogród']
   = f.input :free_time, label: 'W jaki sposób spędzasz czas wolny?', collection: ['W ogrodzie', 'Na spacerach', 'Regularnie biegam', 'W domu']
   = f.input :children_age, label: 'Czy masz dzieci, a jeżeli tak to w jakim wieku?', collection: ['Nie mam dzieci', '0 - 3 lata', '3 - 7 lat', '7 - 12 lat', '12 -17 lat', 'powyżej 17 lat']
