@@ -4,7 +4,8 @@
       %div.top-section
         %div.logo
           %div.logo-image
-            %img{src: root_path + 'logo.png'}
+            = link_to root_path do
+              %img{src: root_path + 'logo.png'}
           %h2
             Bezpieczna
             %br

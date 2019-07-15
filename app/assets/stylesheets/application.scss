@@ -227,7 +227,6 @@ a:hover {
   background-size: cover;
   font-family: "Spinnaker", Sans-serif;
   color: white;
-  margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -259,4 +258,82 @@ a:hover {
 
 .cropped {
   min-height: 600px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: flex;
+  width: 80%;
+  max-width: 1140px;
+  margin: auto;
+  padding: 80px 0px 100px 0px;
+}
+
+.footer-left {
+  width: 33.33%;
+  img {
+    max-width: 70%;
+    display: flex;
+    margin: auto;
+  } }
+
+.footer-center {
+  padding: 20px 50px 0px 50px;
+  width: 57%;
+}
+
+.contact-title {
+  font-family: "Spinnaker", Sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0px 0px 20px 0px;
+}
+
+.contact-details {
+  background-color: transparent;
+  background-image: linear-gradient(40deg, #159b3a 46%, #ffffff 100%);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.28);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 30px 30px 30px 30px;
+  border-radius: 5px 5px 5px 5px;
+  font-family: "Spinnaker", Sans-serif;
+  font-size: 17px;
+  color: white;
+}
+
+.contact-details p:first-child {
+  font-weight: 900;
+}
+
+.size_20 {
+  font-size: 20px;
+}
+
+.footer-right {
+  width: 24.295%;
+  padding: 20px 0px 0px 30px;
+  color: #000000;
+  text-transform: uppercase;
+  font-family: "Spinnaker", Sans-serif;
+}
+
+.menu-title {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.link {
+  font-size: 16px;
+  padding-bottom: 40px;
+  a {
+    color: black;
+  }
+}
+
+.container-footer {
+  display: block;
+  box-shadow: 0px 0px 40px 15px rgba(0,0,0,0.26) inset;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
 }
