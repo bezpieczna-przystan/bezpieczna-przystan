@@ -1,12 +1,33 @@
-%nav.navbar.navbar-bottom.navbar-dark.bg-success
-  %navbar-brand.mx-auto.text-center
-    .p.font-weight-bolder Dom tymczasowy dla zwierząt
-    .p.font-weight-bolder Bezpieczna Przystań
-
-    .p Linarczyk 13C
-    .p 86-300 Grudziądz
-
-    .p Telefon: 757 577 543
-
-    .p Numer konta bankowego:
-    .p.font-weight-bold 10 1010 2300 0026 1395 1000 0025 2183
+%div.container-footer
+  %div.footer
+    %div.footer-left
+      %img{src: root_path + 'logo_large.png'}
+    %div.footer-center
+      %div.contact-title
+        dane kontaktowe
+      %div.contact-details
+        .p.font-weight-bold.size_20
+          Dom tymczasowy dla zwierząt
+          %br
+          "Bezpieczna Przystań"
+        %br
+        .p Linarczyk 13C
+        .p 86-300 Grudziądz
+        %br
+        .p Email: info@bezpiecznaprzystan.pl
+        .p Telefon: 757 577 543
+        %br
+        .p Numer konta bankowego:
+        .p.font-weight-bold.size_20 10 1010 2300 0026 1395 1000 0025 2183
+    %div.footer-right
+      %div.menu-title
+        menu
+      %div.menu-links
+        .link
+          = link_to "Blog", articles_path
+        .link
+          = link_to "Nasi podopieczni", animals_path
+        .link
+          = link_to "Kontakt", new_message_path
+        .link
+          = link_to "Adopcja", new_message_path

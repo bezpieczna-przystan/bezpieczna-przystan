@@ -24,19 +24,19 @@
           %h2 10 1010 2300 0026 1395 1000 0025 2183
           %h3 Przekazując dowolną darowiznę na rzecz Domu “Bezpieczna Przystań”, pomagasz dbać o zdrowie i dobry stan naszych milusińskich.
       %div.col-5
-
-.jumbotron
-  %h1
-    Nowości na blogu
-    %p
-    .row
-      .col-12
-        =link_to article_path(@article) do
-          %h3 #{@article.title}
-      .col-3
-        %img.img-thumbnail{alt: @article.title, src: @article.main_image, id:"article_image_main"}/
-      .col-8
-        %p.lead #{@article.body}
-
-  %p
-  %a.btn.btn-success.btn-md{:href => articles_path, :role => "button"} Pozostałe artykuły
+-# 
+-# .jumbotron
+-#   %h1
+-#     Nowości na blogu
+-#     %p
+-#     .row
+-#       .col-12
+-#         =link_to article_path(@article) do
+-#           %h3 #{@article.title}
+-#       .col-3
+-#         %img.img-thumbnail{alt: @article.title, src: @article.main_image, id:"article_image_main"}/
+-#       .col-8
+-#         %p.lead #{@article.body}
+-#
+-#   %p
+-#   %a.btn.btn-success.btn-md{:href => articles_path, :role => "button"} Pozostałe artykuły
