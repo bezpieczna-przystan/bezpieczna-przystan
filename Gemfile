@@ -31,6 +31,7 @@ gem 'sentry-raven'
 gem 'simple_form'
 gem 'social-share-button'
 gem 'will_paginate', '~> 3.1.6'
+gem 'invisible_captcha'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
