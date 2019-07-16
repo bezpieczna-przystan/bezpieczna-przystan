@@ -1,21 +1,23 @@
-%h1 Ankieta dla przyszłego właściciela
-%h3 Odpowiadając na kilka pytań pozwolisz nam znaleźć pasa spełniającego Twoje wymagania i wpisującego się w Twój rytm dnia.
-%p
-%p
+.container.col-10
+  %h1 Ankieta dla przyszłego właściciela
+  %h3 Odpowiadając na kilka pytań pozwolisz nam znaleźć pasa spełniającego Twoje wymagania
+  %h3 oraz wpisującego się w Twój rytm dnia.
+  %p
+  %p
+  .form
+    = simple_form_for @adoption, url: adoption_path do |f|
+      = f.invisible_captcha :subtitle
+      = f.input :name, label: 'Imię i nazwisko:'
+      = f.input :email
+      = f.input :phone_number, label: 'Nr telefonu'
+      = f.input :gender, label: 'Płeć psa', collection: ['Pies', 'Suka']
+      = f.input :dog_size, label: 'Wielkość psa', collection: ['Do łydki', 'Do kolana', 'Powyżej kolana', 'Molos']
+      = f.input :where_keep, label: 'Gdzie pies będzie głównie przebywał?', collection: ['Dom', 'Ogród']
+      = f.input :free_time, label: 'W jaki sposób spędzasz czas wolny?', collection: ['W ogrodzie', 'Na spacerach', 'Regularnie biegam', 'W domu']
+      = f.input :children_age, label: 'Czy masz dzieci, a jeżeli tak to w jakim wieku?', collection: ['Nie mam dzieci', '0 - 3 lata', '3 - 7 lat', '7 - 12 lat', '12 -17 lat', 'powyżej 17 lat']
+      = f.input :other_animals, label: 'Czy posiadasz aktualnie jakieś zwierzęta, a jeżeli tak to jakie?'
+      = f.input :had_dog, label: 'Czy miałes już wcześniej psa?', collection: ['tak', 'nie']
+      = f.input :hours_alone, label: 'Ile godzin w ciągu dnia pies pozostawałby sam?', collection: ['do 2 godzin dziennie', 'od 2 do 4 godzin dziennie', 'od 4 do 8 godzin dziennie', 'od 8 do 10 godzin dziennie', 'powyżej 10 godzin dziennie']
+      = f.input :comments, label: 'Dodatkowe informacje, pytania, uwagi:'
 
-= simple_form_for @adoption, url: adoption_path do |f|
-  = f.invisible_captcha :subtitle
-  = f.input :name, label: 'Imię i nazwisko:'
-  = f.input :email
-  = f.input :phone_number, label: 'Nr telefonu'
-  = f.input :gender, label: 'Płeć psa', collection: ['Pies', 'Suka']
-  = f.input :dog_size, label: 'Wielkość psa', collection: ['Do łydki', 'Do kolana', 'Powyżej kolana', 'Molos']
-  = f.input :where_keep, label: 'Gdzie pies będzie głównie przebywał?', collection: ['Dom', 'Ogród']
-  = f.input :free_time, label: 'W jaki sposób spędzasz czas wolny?', collection: ['W ogrodzie', 'Na spacerach', 'Regularnie biegam', 'W domu']
-  = f.input :children_age, label: 'Czy masz dzieci, a jeżeli tak to w jakim wieku?', collection: ['Nie mam dzieci', '0 - 3 lata', '3 - 7 lat', '7 - 12 lat', '12 -17 lat', 'powyżej 17 lat']
-  = f.input :other_animals, label: 'Czy posiadasz aktualnie jakieś zwierzęta, a jeżeli tak to jakie?'
-  = f.input :had_dog, label: 'Czy miałes już wcześniej psa?', collection: ['tak', 'nie']
-  = f.input :hours_alone, label: 'Ile godzin w ciągu dnia pies pozostawałby sam?', collection: ['do 2 godzin dziennie', 'od 2 do 4 godzin dziennie', 'od 4 do 8 godzin dziennie', 'od 8 do 10 godzin dziennie', 'powyżej 10 godzin dziennie']
-  = f.input :comments, label: 'Dodatkowe informacje, pytania, uwagi:'
-
-  = f.button :submit, 'Wyślij', class: 'btn btn-success btn-md'
+      = f.button :submit, 'Wyślij', class: 'btn btn-success btn-md'
