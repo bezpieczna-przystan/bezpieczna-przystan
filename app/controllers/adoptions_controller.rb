@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class AdoptionsController < ApplicationController
+  invisible_captcha only: %i[create send_preferences], honeypot: :subtitle
   before_action :find_animal, only: %i[new create]
   def new
     @adoption = DogAdoption.new

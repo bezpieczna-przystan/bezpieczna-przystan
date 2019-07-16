@@ -6,6 +6,7 @@
 %p W celu ułatwienia procesu związanego z adopcją, prosimy o wypełnienie poniższego formularza.
 
 = simple_form_for @adoption, url: animal_send_adoption_form_path do |f|
+  = f.invisible_captcha :subtitle
   = f.input :name, label: 'Imię i nazwisko:'
   = f.input :email
   = f.input :phone_number, label: 'Nr telefonu'
