@@ -19,7 +19,7 @@
             %li.nav-item
               = link_to "Kontakt", new_message_path, class: 'nav-link'
             %li.nav-item.adoption-button
-              = link_to "Adopcja", new_message_path, class: 'nav-link'
+              = link_to "Adopcja", adoption_path, class: 'nav-link'
             -if user_signed_in?
               %li.nav-item
                 =link_to "Dodaj artykuł", new_article_path, class: 'btn btn-info btn-sm'

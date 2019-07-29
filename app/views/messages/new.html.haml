@@ -1,6 +1,11 @@
-= simple_form_for @message, url: create_message_path do |f|
-  = f.input :name, label: 'Imię i nazwisko'
-  = f.input :email
-  = f.input :phone_number, label: 'Nr telefonu'
-  = f.input :body, label: 'Treść wiadomości'
-  = f.button :submit, 'Wyślij', class: 'btn btn-success btn-md'
+.form-header
+  .form-header-text
+    Formularz kontatkowy
+.form
+  = simple_form_for @message, url: create_message_path do |f|
+    = f.invisible_captcha :subtitle
+    = f.input :name, label: 'Imię i nazwisko'
+    = f.input :email
+    = f.input :phone_number, label: 'Nr telefonu'
+    = f.input :body, label: 'Treść wiadomości'
+    = f.button :submit, 'Wyślij', class: 'btn btn-success btn-md'
