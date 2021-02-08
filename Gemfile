@@ -17,7 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'activestorage-cloudinary-service'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'cloudinary'
 gem 'devise'
 gem 'draper'
